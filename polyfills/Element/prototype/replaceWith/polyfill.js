@@ -1,5 +1,5 @@
 Document.prototype.replaceWith = Element.prototype.replaceWith = function replaceWith() {
-	if (this.parentNode) {
+	if (this.parentNode && arguments.length) {
 		this.parentNode.replaceChild(_mutation(arguments), this);
 	}
 };

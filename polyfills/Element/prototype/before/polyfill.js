@@ -1,5 +1,5 @@
 Document.prototype.before = Element.prototype.before = function before() {
-	if (this.parentNode) {
+	if (this.parentNode && arguments.length) {
 		this.parentNode.insertBefore(_mutation(arguments), this);
 	}
 };
